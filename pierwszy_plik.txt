@@ -1,2 +1,206 @@
 pierwsza_linijka
 druga
+
+
+vdi-student@Win10Prog-34 MINGW64 ~
+$ mkdir krukemilia
+
+vdi-student@Win10Prog-34 MINGW64 ~
+$ mkdir se_nauka_gita
+
+vdi-student@Win10Prog-34 MINGW64 ~
+$ cd krukemilia
+
+vdi-student@Win10Prog-34 MINGW64 ~/krukemilia
+$ mkdir se_nauka_gita
+
+vdi-student@Win10Prog-34 MINGW64 ~/krukemilia
+$ cd se_nauka_gita
+
+vdi-student@Win10Prog-34 MINGW64 ~/krukemilia/se_nauka_gita
+$ git init
+Initialized empty Git repository in C:/Users/vdi-student/krukemilia/se_nauka_gita/.git/
+
+vdi-student@Win10Prog-34 MINGW64 ~/krukemilia/se_nauka_gita (master)
+$ git congig -l
+git: 'congig' is not a git command. See 'git --help'.
+
+The most similar command is
+        config
+
+vdi-student@Win10Prog-34 MINGW64 ~/krukemilia/se_nauka_gita (master)
+$ git config -l
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+core.editor="C:\\Program Files\\Notepad++\\notepad++.exe" -multiInst -notabbar -nosession -noPlugin
+pull.rebase=false
+credential.helper=manager
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+
+vdi-student@Win10Prog-34 MINGW64 ~/krukemilia/se_nauka_gita (master)
+$ git config --global user.name "krukemilia"
+
+vdi-student@Win10Prog-34 MINGW64 ~/krukemilia/se_nauka_gita (master)
+$ git config -l
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+core.editor="C:\\Program Files\\Notepad++\\notepad++.exe" -multiInst -notabbar -nosession -noPlugin
+pull.rebase=false
+credential.helper=manager
+user.name=krukemilia
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+
+vdi-student@Win10Prog-34 MINGW64 ~/krukemilia/se_nauka_gita (master)
+$ git config --global user.email "krukemilia@users.noreply.github.com"
+
+vdi-student@Win10Prog-34 MINGW64 ~/krukemilia/se_nauka_gita (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+vdi-student@Win10Prog-34 MINGW64 ~/krukemilia/se_nauka_gita (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        pierwszy_plik.txt.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+vdi-student@Win10Prog-34 MINGW64 ~/krukemilia/se_nauka_gita (master)
+$ git add pierwszy_plik.txt
+
+vdi-student@Win10Prog-34 MINGW64 ~/krukemilia/se_nauka_gita (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   pierwszy_plik.txt
+
+
+vdi-student@Win10Prog-34 MINGW64 ~/krukemilia/se_nauka_gita (master)
+$ git commit
+[master (root-commit) 998e3e4] PIERWSZY COMMIT
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 pierwszy_plik.txt
+
+vdi-student@Win10Prog-34 MINGW64 ~/krukemilia/se_nauka_gita (master)
+$ GIT LOG
+fatal: cannot handle LOG as a builtin
+
+vdi-student@Win10Prog-34 MINGW64 ~/krukemilia/se_nauka_gita (master)
+$ git log
+commit 998e3e49f5f2748c95d727f80f8b61c10296aa5b (HEAD -> master)
+Author: krukemilia <krukemilia@users.noreply.github.com>
+Date:   Sat Mar 20 15:45:01 2021 +0100
+
+    PIERWSZY COMMIT
+
+vdi-student@Win10Prog-34 MINGW64 ~/krukemilia/se_nauka_gita (master)
+$ git log --pretty=oneline
+998e3e49f5f2748c95d727f80f8b61c10296aa5b (HEAD -> master) PIERWSZY COMMIT
+
+vdi-student@Win10Prog-34 MINGW64 ~/krukemilia/se_nauka_gita (master)
+$ git remote add origin https://github.com/krukemilia/se_nauka_gita
+
+vdi-student@Win10Prog-34 MINGW64 ~/krukemilia/se_nauka_gita (master)
+$ git remote -v
+origin  https://github.com/krukemilia/se_nauka_gita (fetch)
+origin  https://github.com/krukemilia/se_nauka_gita (push)
+
+vdi-student@Win10Prog-34 MINGW64 ~/krukemilia/se_nauka_gita (master)
+$ git push origin master
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 242 bytes | 242.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/krukemilia/se_nauka_gita
+ * [new branch]      master -> master
+
+vdi-student@Win10Prog-34 MINGW64 ~/krukemilia/se_nauka_gita (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+vdi-student@Win10Prog-34 MINGW64 ~/krukemilia/se_nauka_gita (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   pierwszy_plik.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+vdi-student@Win10Prog-34 MINGW64 ~/krukemilia/se_nauka_gita (master)
+$ git commit -a -m "Drugi commit"
+[master 8099902] Drugi commit
+ 1 file changed, 1 insertion(+)
+
+vdi-student@Win10Prog-34 MINGW64 ~/krukemilia/se_nauka_gita (master)
+$ git log --pretty=oneline
+809990200a90c9afd075e496ec8cbe224613ea94 (HEAD -> master) Drugi commit
+998e3e49f5f2748c95d727f80f8b61c10296aa5b (origin/master) PIERWSZY COMMIT
+
+vdi-student@Win10Prog-34 MINGW64 ~/krukemilia/se_nauka_gita (master)
+$ git commit -a -m "trzeci commit"
+[master fb1a737] trzeci commit
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+vdi-student@Win10Prog-34 MINGW64 ~/krukemilia/se_nauka_gita (master)
+$ git log --pretty=oneline
+fb1a73770e31dcf029275a1d2a0cccb74717cbb8 (HEAD -> master) trzeci commit
+809990200a90c9afd075e496ec8cbe224613ea94 Drugi commit
+998e3e49f5f2748c95d727f80f8b61c10296aa5b (origin/master) PIERWSZY COMMIT
+
+vdi-student@Win10Prog-34 MINGW64 ~/krukemilia/se_nauka_gita (master)
+$ git push --set-upstream origin master
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (6/6), 524 bytes | 524.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/krukemilia/se_nauka_gita
+   998e3e4..fb1a737  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+vdi-student@Win10Prog-34 MINGW64 ~/krukemilia/se_nauka_gita (master)
+$
